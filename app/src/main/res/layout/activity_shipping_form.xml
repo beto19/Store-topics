@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_shipping_form"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.roberto.storetopics.customers.ShippingFormActivity">
+
+    <TextView
+        android:text="Método de págo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView2"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textColor="@android:color/background_dark" />
+
+    <TextView
+        android:text="Dirección Principal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="18dp"
+        android:id="@+id/textView4"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/holo_blue_dark" />
+
+    <TextView
+        android:text="Apellidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/textView9"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textColor="@android:color/black" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/textView4" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/txtFirstName"
+        android:layout_alignStart="@+id/txtFirstName"
+        android:id="@+id/txtLastName" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/txtLastName"
+        android:layout_alignStart="@+id/txtLastName"
+        android:id="@+id/txtAddres1" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/txtAddres1"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/txtCiudad" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/txtCiudad"
+        android:layout_alignStart="@+id/txtCiudad"
+        android:id="@+id/txtEstado" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:layout_below="@+id/txtEstado"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/txtPostCode" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/txtPostCode"
+        android:layout_alignStart="@+id/txtPostCode"
+        android:id="@+id/txtCountry" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtFirstName"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Nombres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textColor="@android:color/black"
+        android:layout_alignBaseline="@+id/txtFirstName"
+        android:layout_alignBottom="@+id/txtFirstName"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Dirección"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView10"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textColor="@android:color/black"
+        android:layout_alignBaseline="@+id/txtAddres1"
+        android:layout_alignBottom="@+id/txtAddres1"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Ciudad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView11"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textColor="@android:color/black"
+        android:layout_alignBaseline="@+id/txtCiudad"
+        android:layout_alignBottom="@+id/txtCiudad"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Estado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView12"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textColor="@android:color/black"
+        android:layout_alignBaseline="@+id/txtEstado"
+        android:layout_alignBottom="@+id/txtEstado"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Código Postal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView13"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textColor="@android:color/black"
+        android:layout_alignBaseline="@+id/txtPostCode"
+        android:layout_alignBottom="@+id/txtPostCode"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="País"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView14"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textColor="@android:color/black"
+        android:layout_alignBaseline="@+id/txtCountry"
+        android:layout_alignBottom="@+id/txtCountry"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView15"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textColor="@android:color/black"
+        android:layout_alignBaseline="@+id/txtEmail"
+        android:layout_alignBottom="@+id/txtEmail"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:layout_below="@+id/textView15"
+        android:layout_alignEnd="@+id/txtEmail"
+        android:id="@+id/txtTelefono" />
+
+    <Button
+        android:text="Comprar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btnBuyBuy" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/txtEmail"
+        android:layout_below="@+id/txtCountry"
+        android:layout_toEndOf="@+id/textView2" />
+
+    <TextView
+        android:text="Teléfono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView17"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textColor="@android:color/black"
+        android:layout_alignBottom="@+id/txtTelefono"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

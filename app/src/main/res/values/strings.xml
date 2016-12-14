@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">StoreTopics</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string-array name="status">
+        <item>Transferencia Bancaria Directa</item>
+        <item>Pago con Cheque</item>
+        <item>Pago en entrega</item>
+    </string-array>
+
+    <string-array name="categorias">
+        <item>Todos</item>
+        <item>3DS</item>
+        <item>Wii U</item>
+        <item>PS3</item>
+        <item>PS4</item>
+        <item>Xbox 360</item>
+        <item>Xbox One</item>
+        <item>Funkos</item>
+        <item>Playeras</item>
+    </string-array>
+
+    <string-array name="statusOrden">
+        <item>Completed</item>
+        <item>Processing</item>
+        <item>Cancelled</item>
+        <item>On Hold</item>
+        <item>Pending Payment</item>
+        <item>Refunded</item>
+        <item>Failed</item>
+    </string-array>
+</resources>

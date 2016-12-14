@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_cliente"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.roberto.storetopics.customers.ClienteActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/tvNombre"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:text="Carrito"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvNombre"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btnCarrito" />
+
+    <Button
+        android:text="Datos Personales"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnCarrito"
+        android:layout_alignEnd="@+id/btnCarrito"
+        android:id="@+id/btnDatosPersonales" />
+
+    <Button
+        android:text="Ordenes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnOrd"
+        android:layout_below="@+id/btnDatosPersonales"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnMostrarProductos"
+        android:layout_below="@+id/btnOrd"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="100dp" />
+
+    <TextView
+        android:text="Categorias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView19"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textColor="@android:color/background_dark"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView19"
+        android:layout_toEndOf="@+id/textView19"
+        android:layout_marginStart="12dp"
+        android:id="@+id/spinner2" />
+</RelativeLayout>
