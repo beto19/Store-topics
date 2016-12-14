@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -43,6 +44,7 @@ public class ShippingFormCustomerActivity extends AppCompatActivity implements R
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shipping_form_customer);
         idCliente=getIntent().getIntExtra("id",-1);
+        //Toast.makeText(getBaseContext(), "idCliente: "+idCliente, Toast.LENGTH_SHORT).show();
         customer=new Customer(idCliente);
         api=new RestApi(this);
         tarea= Volley.newRequestQueue(this);
@@ -91,7 +93,7 @@ public class ShippingFormCustomerActivity extends AppCompatActivity implements R
         tarea.start();
         AgregarCarritoActivity.arrayProducts.clear();
             Intent intent=new Intent(getBaseContext(),ClienteActivity.class);
-            intent.putExtra("idCliente",idCliente);
+            intent.putExtra("idCliente",-1);
             startActivity(intent);
     }
 
@@ -175,8 +177,8 @@ public class ShippingFormCustomerActivity extends AppCompatActivity implements R
             direccion2.put("country", customer.getCountry());
             //shipping_address.put("shipping_address", direccion2);
 
-            customer_id.put("customer_id", idCliente);
 
+            //Toast.makeText(getBaseContext(), "customerID: "+idCliente, Toast.LENGTH_SHORT).show();
             for (int i = 0; i < AgregarCarritoActivity.arrayProducts.size(); i++) {
                 lineItemsChild.put("product_id", AgregarCarritoActivity.arrayProducts.get(i).getId());
                 lineItemsChild.put("quantity", AgregarCarritoActivity.arrayProducts.get(i).getCantidad());
@@ -187,7 +189,7 @@ public class ShippingFormCustomerActivity extends AppCompatActivity implements R
             json.put("payment_details",detallesDePago);
             json.put("billing_address",direccion1);
             json.put("shipping_address",direccion2);
-            json.put("customer_id",0);
+            json.put("customer_id",idCliente);
             json.put("line_items",line_items_array);
             jsonObject.put("order",json);
 
@@ -218,8 +220,16 @@ public class ShippingFormCustomerActivity extends AppCompatActivity implements R
         }
 
         inserta();
+        //prueba();
 
     }
+
+    }
+
+    public void prueba()
+    {
+        Toast.makeText(getBaseContext(), getJson().toString(), Toast.LENGTH_SHORT).show();
+
     }
 
     @Override

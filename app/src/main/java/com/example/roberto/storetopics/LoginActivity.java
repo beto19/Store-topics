@@ -21,6 +21,7 @@ import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.roberto.storetopics.admin.AdminActivity;
 import com.example.roberto.storetopics.customers.ClienteActivity;
 
 import org.json.JSONException;
@@ -46,8 +47,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         progressDialog = new ProgressDialog(this);
         btnLogin = (Button) findViewById(R.id.btnLogin);
 
-        //edtEmail = (EditText) findViewById(R.id.edtEmail);
-        //edtPassword = (EditText) findViewById(R.id.edtPassword);
+        edtEmail = (EditText) findViewById(R.id.edtEmail);
+        edtPassword = (EditText) findViewById(R.id.edtPassword);
         btnLogin.setOnClickListener(this);
         progressDialog.setMessage("Cargando...");
         //prueba = (TextView) findViewById(R.id.prueba);
@@ -71,8 +72,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             public Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<>();
                 //Parametros en la peticion
-                params.put("username", "beto19");
-                params.put("password", "Frost_Bite_2");
+                String username = edtEmail.getText().toString();
+                String pass = edtPassword.getText().toString();
+                params.put("username", username);
+                params.put("password", pass);
                 return params;
             }
         };
@@ -91,9 +94,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     String rol = json.getString("rol");
                     //Checo que tipo de usuario es, dependiendo de este se envia a su respectiva pantalla
                     if (rol.equalsIgnoreCase("administrator")) {
-                        //Intent i = new Intent(this, AdminActivity.class);
-                        //i.putExtra("id", id);
-                        //startActivity(i);
+                        Intent i = new Intent(this, AdminActivity.class);
+                        i.putExtra("id", id);
+                        startActivity(i);
 
                     } else if(rol.equalsIgnoreCase("customer")){
                         Intent intent=new Intent(this, ClienteActivity.class);
@@ -135,5 +138,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         session = response;
         progressDialog.hide();
         auth();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        progressDialog.cancel();
+        progressDialog = null;
     }
 }

@@ -75,7 +75,7 @@ public class ProductosActivity extends AppCompatActivity {
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
-        Toast.makeText(getBaseContext(), jsonResult, Toast.LENGTH_LONG).show();
+        //Toast.makeText(getBaseContext(), jsonResult, Toast.LENGTH_LONG).show();
         ListProductos();
 
     }

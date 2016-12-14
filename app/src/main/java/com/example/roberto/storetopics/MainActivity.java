@@ -47,6 +47,8 @@ public class MainActivity extends AppCompatActivity
     String consumer_secret = "cs_0b6239dded2cbf1bc56bbbae5a49e913842123b9";
     String url = "https://storeitc-luisitoaltamira.rhcloud.com/wc-api/v3/products";
     String jsonResult;
+    public static final String url_principal = "https://storeitc-luisitoaltamira.rhcloud.com";
+
     List<Products> items = new ArrayList<Products>();
     ListView listProducts;
     ArrayList<String> arrayProducts;
@@ -107,7 +109,7 @@ public class MainActivity extends AppCompatActivity
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
-        Toast.makeText(getBaseContext(), jsonResult, Toast.LENGTH_LONG).show();
+        //Toast.makeText(getBaseContext(), jsonResult, Toast.LENGTH_LONG).show();
         ListProductos();
 
     }
@@ -201,6 +203,8 @@ public class MainActivity extends AppCompatActivity
             //login
             Intent intent=new Intent(getBaseContext(),LoginActivity.class);
             startActivity(intent);
+
+            finish();
         }else if(id==R.id.nav_send){
             //sign in
         }else if(id==R.id.carrito){
@@ -240,7 +244,7 @@ public class MainActivity extends AppCompatActivity
                 {
                     Integer id_product = jsonChildNode.optInt("id");
                     arrayProducts.add(Integer.toString(id_product));
-                    Toast.makeText(getApplicationContext(), Integer.toString(id_product),Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplicationContext(), Integer.toString(id_product),Toast.LENGTH_SHORT).show();
                 }
             }
             Intent intent=new Intent(getBaseContext(),FiltroActivity.class);
@@ -255,6 +259,9 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
 
-
+    }
 }

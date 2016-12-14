@@ -23,7 +23,7 @@ public class ClienteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cliente);
         idCliente=getIntent().getIntExtra("idCliente",-1);
-        Toast.makeText(this, ""+idCliente, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, ""+idCliente, Toast.LENGTH_SHORT).show();
         Spinner spinner = (Spinner) findViewById(R.id.spinner2);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.categorias, android.R.layout.simple_spinner_item);

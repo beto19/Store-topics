@@ -20,6 +20,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".admin.AdminActivity" />
+        <activity android:name=".admin.CustomerActivity" />
+        <activity android:name=".admin.EditCustomerActivity" />
+        <activity android:name=".admin.ProductActivity" />
+        <activity android:name=".admin.EditProductActivity" />
+        <activity android:name=".admin.CategoryActivity" />
+        <activity android:name=".admin.EditCategoryActivity" />
+        <activity android:name=".admin.AddCouponActivity" />
+        <activity android:name=".admin.ReportActivity" />
+        <activity android:name=".admin.ReportGenerateActivity" />
+        <activity android:name=".admin.PastelActivity" />
+        <activity android:name=".admin.BarrasActivity" />
+        <activity android:name=".admin.AddProductActivity" />
+        <activity android:name=".admin.AddCategoryActivity"/>
         <activity android:name=".customers.FiltroActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".customers.AgregarCarritoActivity" />

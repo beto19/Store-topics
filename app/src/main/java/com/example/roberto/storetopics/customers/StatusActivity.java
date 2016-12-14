@@ -55,7 +55,7 @@ public class StatusActivity extends AppCompatActivity {
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
-        Toast.makeText(getBaseContext(), jsonResult, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getBaseContext(), jsonResult, Toast.LENGTH_SHORT).show();
         //ListOrders();
         selector(id);
 
@@ -100,7 +100,7 @@ public class StatusActivity extends AppCompatActivity {
             for (int i = 0; i < jsonMainNode.length(); i++) {
                 JSONObject jsonChildNode = jsonMainNode.getJSONObject(i);
                 String statusCaso = jsonChildNode.optString("status");
-                    Integer idCustomer=jsonChildNode.optInt("customer_id");
+                    int idCustomer=jsonChildNode.optInt("customer_id");
                 if(status.equals(statusCaso) && idCustomer==idCliente) {
                     Integer id = jsonChildNode.optInt("id");
                     Integer numeroOrden = jsonChildNode.optInt("order_number");

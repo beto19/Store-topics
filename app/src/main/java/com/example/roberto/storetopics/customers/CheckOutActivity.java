@@ -60,9 +60,11 @@ public class CheckOutActivity extends AppCompatActivity {
         public void onClick(View v) {
             if(autenticado)
             {
+
                 Intent intent=new Intent(getBaseContext(),ShippingFormCustomerActivity.class);
                 intent.putExtra("autenticado",autenticado);
                 intent.putExtra("id",idCliente);
+                //Toast.makeText(getBaseContext(), "autenticadopaps:"+idCliente, Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }
             else {

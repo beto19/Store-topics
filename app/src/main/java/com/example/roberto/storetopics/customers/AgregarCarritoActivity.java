@@ -58,7 +58,7 @@ public class AgregarCarritoActivity extends AppCompatActivity {
  View.OnClickListener btnListener=new View.OnClickListener() {
      @Override
      public void onClick(View v) {
-         Toast.makeText(getBaseContext(),idProducto,Toast.LENGTH_SHORT).show();
+         //Toast.makeText(getBaseContext(),idProducto,Toast.LENGTH_SHORT).show();
          cantidadTotal=Double.parseDouble(cantidad.getText().toString());
          if(cantidad.getText().toString().isEmpty()) {
              Toast.makeText(getBaseContext(),"Debe introducir una cantidad",Toast.LENGTH_SHORT).show();
@@ -72,6 +72,7 @@ public class AgregarCarritoActivity extends AppCompatActivity {
              //Toast.makeText(getBaseContext(),""+arrayProducts.size(),Toast.LENGTH_SHORT).show();
              if(autenticado)
              {
+                 //Toast.makeText(getBaseContext(), "autenticadolkadfakldfj", Toast.LENGTH_SHORT).show();
                  Intent intent=new Intent(getBaseContext(), ClienteActivity.class);
                  intent.putExtra("idCliente",idCliente);
                  startActivity(intent);

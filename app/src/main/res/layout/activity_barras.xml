@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.luis.app.admin.BarrasActivity">
+    tools:context="com.example.roberto.storetopics.admin.BarrasActivity">
     <com.github.mikephil.charting.charts.BarChart
         android:id="@+id/barras"
         android:layout_width="match_parent"

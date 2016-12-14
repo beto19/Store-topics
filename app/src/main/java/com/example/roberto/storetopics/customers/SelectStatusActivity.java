@@ -38,7 +38,7 @@ public class SelectStatusActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
 
-            Toast.makeText(getBaseContext(),String.valueOf(idStatus),Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getBaseContext(),String.valueOf(idStatus),Toast.LENGTH_SHORT).show();
             Intent intent=new Intent(getBaseContext(),StatusActivity.class);
             intent.putExtra("id",idStatus);
             intent.putExtra("idCliente",idCliente);
